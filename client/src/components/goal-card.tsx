@@ -64,7 +64,7 @@ export default function GoalCard({ goal, onUpdate, onDelete }: GoalCardProps) {
           <Progress value={progress} />
         </div>
 
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-3 gap-4">
           <div>
             <p className="text-sm text-muted-foreground">Target</p>
             <p className="text-lg font-semibold">
@@ -75,6 +75,12 @@ export default function GoalCard({ goal, onUpdate, onDelete }: GoalCardProps) {
             <p className="text-sm text-muted-foreground">Current</p>
             <p className="text-lg font-semibold">
               ${Number(goal.currentAmount).toLocaleString()}
+            </p>
+          </div>
+          <div>
+            <p className="text-sm text-muted-foreground">Timeline</p>
+            <p className="text-lg font-semibold">
+              {goal.yearsToSave} {goal.yearsToSave === 1 ? 'year' : 'years'}
             </p>
           </div>
         </div>
