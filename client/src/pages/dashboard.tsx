@@ -53,7 +53,14 @@ export default function Dashboard() {
     <div className="min-h-screen bg-background p-6">
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
+          <div className="flex items-center gap-3">
+          <img 
+              src="/masusulogo.png"
+              alt="Logo"
+              className="h-12 w-12 object-cover rounded-lg"
+            />
           <h1 className="text-4xl font-bold">Savings Goals</h1>
+          </div>
           <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
             <DialogTrigger asChild>
               <Button>
